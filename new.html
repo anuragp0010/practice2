@@ -8,7 +8,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-
 <style>
 .modal
 {
@@ -19,36 +18,20 @@
 		width: 30%;
 		height:50%;
 }
-	
-
-
-
-
-
-
-
 .new1
 {
-	background-color:#99b33c;
+	background-color:#00b33c;
 	width:30%;
 }
 .new2
 {
-	background-color:#cc9999;
+	background-color:#cc3300;
 	width:30%;
 }
 .new3
 {
 	width:30%;
 }
-
-
-
-
-
-
-
-
 .modal
 {       	
 			font-size:30px;
@@ -58,13 +41,6 @@
 
 </style>
 </head>
-
-
-
-
-
-
-
 <body>
 <div>
 		<h1 align="center">Member Login</h1>
@@ -113,5 +89,41 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+
+
+<p>Click on the button at the bottom of the page to register</p>
+	<button onclick="document.getElementById('js1').style.display='block'" style="width:auto;">Open form</button>
+	<div align="center" id="js1" class="modal">
+	 <form>
+		 <h1>LOGIN</h1>
+		 
+		<div class="row">
+		<label for="email"><b>Email</b></label><br>
+		<input class="new3" type="text" placeholder="Enter Email" name="Email" required>
+		</div>
+		
+		<div class="row"  style="margin-top:50px ; margin-bottom:50px">
+		<label for="psw"><b>Password</b></label><br>
+		<input class="new3"type="password" placeholder="Enter Password" name="psw" required>
+		</div>
+		
+		
+		<button  class="new1" type="submit">login</button><br>
+		<button class="new2" type="button" onclick="closeform()">Close</button>
+	 </form>
+	</div>
+	<script>
+	// Get the modal
+	var modal = document.getElementById('js1');
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+		
+	</script>
+	
+	
 
 
